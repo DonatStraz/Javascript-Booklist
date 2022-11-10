@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="content">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <div class="container w-3/5 mx-auto">
+    <div class="form-section mt-10">
+      <div class="header flex flex-col items-center"><p class="text-3xl font-bold animate__animated ">Best BookList In The World</p>
+        <p class="text-sm">(Not even close)</p>
+      </div>
+      <form class="mt-3" id="book-form">
+        <div class="m-2">
+            <label for="Title" class="block text-sm font-medium text-gray-900 dark:text-gray-300 mb-1">Title</label>
+            <input type="text" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+          <div class="m-2">
+            <label for="Author" class="block text-sm font-medium text-gray-900 dark:text-gray-300">Author</label>
+            <input type="text" id="author" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+        <div class="m-2">
+          <label for="isbn" class="block text-sm font-medium text-gray-900 dark:text-gray-300">ISBN</label>
+          <input type="text" id="isbn" maxlength="10" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        </div>
+
+        <div class="flex">
+            <div class="w-full m-2">
+              <label for="pages" class="block text-sm font-medium text-gray-900 dark:text-gray-300">Total Pages</label>
+              <input type="number" id="pages" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+            <div class="w-full m-2">
+              <label for="Read" class="block text-sm font-medium text-gray-900 dark:text-gray-300">Read</label>
+              <input type="number" id="read" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+            <div class="form-group rating">
+            </div>
+        </div>
+        <div class="flex">
+          <div for="rate" class="rate flex items-center justify-end">
+            <input type="radio" id="star5" name="rate" value="5"/>
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" name="rate" value="4"/>
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" name="rate" value="3"/>
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" name="rate" value="2"/>
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" name="rate" value="1" checked="checked"/>
+            <label for="star1" title="text">1 star</label>
+            <p>Rate the book</p>
+          </div>
+
+          <div class="flex mt-1.5 items-center">
+            <div  class="mb-1 mx-2">Select book genre:</div>
+            <div class="flex items-center">
+                <input id="default-radio" name="genre" type="radio" value="Fantasy" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="default-radio" class="text-sm font-medium text-gray-900 dark:text-gray-300">Fantasy</label>
+            </div>
+            <div class="flex items-center">
+                <input checked id="checked-radio" name="genre" type="radio" value="History" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="checked-radio" class="text-sm font-medium text-gray-900 dark:text-gray-300">History</label>
+            </div>
+            <div class="flex items-center">
+              <input checked id="checked-radio" name="genre" type="radio" value="Romance" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              <label for="checked-radio" class="text-sm font-medium text-gray-900 dark:text-gray-300">Romance</label>
+            </div>
+            <div class="flex items-center">
+              <input checked id="checked-radio" name="genre" type="radio" value="Mystery" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              <label for="checked-radio" class="text-sm font-medium text-gray-900 dark:text-gray-300">Mystery</label>
+            </div>
+            <div class="flex items-center">
+              <input checked id="checked-radio" name="genre" type="radio" value="Sci-Fi" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              <label for="checked-radio" class="text-sm font-medium text-gray-900 dark:text-gray-300">Sci-Fi</label>
+            </div>
+         </div>
+
+        </div>
+        <div class="flex justify-center mt-3">
+          <button type="submit" name="submit" id="submit" class="bg-slate-500 text-white p-2 text-xl rounded shadow w-full">Add Book</button>
+        </div>
+      </form>
+    </div>
+
+    <section class="booklist-section mt-10 ">
+
+
+      <div class="flex  items-center flex-col">
+        <div class="w-full">
+          <div>
+            <input type="text" id="book-search-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Book title">
+        </div>
+        <div>
+          <input type="text" id="author-search-input" class="hidden bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Auhor">
+        </div>
+        </div>
+        <div class="flex my-2">
+          <div class="form-check m-1">
+            <label for="book-search" class="text-sm font-medium text-gray-900 dark:text-gray-300">Search by books title</label>
+            <input checked id="book-search" checked="checked" name="search-select" type="radio" value="Sci-Fi" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+          </div>
+          <div class="form-check m-1">
+            <label for="author-search" class="text-sm font-medium text-gray-900 dark:text-gray-300">Search by authors name</label>
+            <input checked id="author-search" name="search-select" type="radio" value="Sci-Fi" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+          </div>
+        </div>
+        </div>
+   
+
+      <div id="book-list">
+        <div class="booklist-top border flex justify-between">
+          <div class="m-2 text-left w-full">Title</div>
+          <div class="m-2 text-left w-full">Author</div>
+          <div class="m-2 text-left w-full">Genre</div>
+          <div class="m-2 text-left w-full">Pages</div>
+          <div class="m-2 text-left w-full">Read</div>
+          <div class="m-2 text-left w-full">Pages Left</div>
+          <div class="m-2 text-left w-full">Rate</div>
+          <div class="m-2 text-left w-full">ISBN</div>
+          <div class="m-2 text-left w-full">Delete</div>
+        </div>
+        <div class="booklist-items ">
+          
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="js/scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>
